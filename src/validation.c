@@ -6,7 +6,7 @@
 /*   By: azakarya <azakarya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 22:26:30 by azakarya          #+#    #+#             */
-/*   Updated: 2022/11/03 23:08:17 by azakarya         ###   ########.fr       */
+/*   Updated: 2022/11/20 04:07:05 by azakarya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,7 +107,7 @@ int	arg_check(char **group)
 		if (atoi_check(group[i]) == 1)
 		{
 			free_dp(&group);
-			write(2, "error\n", ft_strlen("error\n"));
+			write(2, "Error\n", ft_strlen("error\n"));
 			exit(1);
 		}
 		check = limits_check(group[i]);
@@ -115,7 +115,7 @@ int	arg_check(char **group)
 		{
 			free_dp(&group);
 			free(check);
-			write(2, "error\n", ft_strlen("error\n"));
+			write(2, "Error\n", ft_strlen("error\n"));
 			exit(1);
 		}
 		free(check);

@@ -6,7 +6,7 @@
 /*   By: azakarya <azakarya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 20:51:29 by azakarya          #+#    #+#             */
-/*   Updated: 2022/11/06 21:52:30 by azakarya         ###   ########.fr       */
+/*   Updated: 2022/11/20 03:16:09 by azakarya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,16 +48,21 @@ void	push(t_stack *stack, int b)
 	{
 		tmp = stack->b;
 		stack->b = stack->b->next;
-		tmp->next = stack->a;
-		stack->a = tmp;
+		tmp->next = NULL;
+		if (!stack->a)
+			stack->a = tmp;
+		else
+			ft_lstadd_front(&(stack->a), tmp);
 		write(1, "pa\n", 3);
 	}
 	if (b == 1)
 	{
 		tmp = stack->a;
 		stack->a = stack->a->next;
-		tmp->next = stack->b;
-		stack->b = tmp;
+		if (!stack->b)
+			stack->b = tmp;
+		else
+			ft_lstadd_front(&(stack->b), tmp);
 		write(1, "pb\n", 3);
 	}
 }

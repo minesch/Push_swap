@@ -6,7 +6,7 @@
 /*   By: azakarya <azakarya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 04:19:12 by azakarya          #+#    #+#             */
-/*   Updated: 2022/11/06 18:05:57 by azakarya         ###   ########.fr       */
+/*   Updated: 2022/11/20 01:08:06 by azakarya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,14 +70,9 @@ void	print_stack(t_list *a)
 	t_list	*tmp;
 
 	tmp = a;
-	while (tmp != NULL)
+	while (tmp)
 	{
-		printf("\n");
-		printf("node-----%p\n", tmp);
-		printf("%d\t->\t[%d]\n", tmp->n, tmp->index);
-		printf("next-----%p\n", (tmp->next));
-		printf("-------------------\n");
-		printf("\n");
+		printf("%d--[%d]\n", tmp->n, tmp->index);
 		tmp = tmp->next;
 	}
 	write(1, "\n", 1);
@@ -95,5 +90,4 @@ void	indexing(t_list *a)
 		(find_smallest(a))->index = loop_count;
 		loop_count++;
 	}
-	print_stack(a);
 }

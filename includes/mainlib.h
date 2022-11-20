@@ -6,7 +6,7 @@
 /*   By: azakarya <azakarya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 20:41:38 by azakarya          #+#    #+#             */
-/*   Updated: 2022/11/06 20:41:21 by azakarya         ###   ########.fr       */
+/*   Updated: 2022/11/20 01:10:39 by azakarya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void	sort_2(t_stack	*stack);
 void	sort_3(t_stack	*stack);
 void	sort_5(t_stack	*stack);
 void	four(t_stack *stack, int b);
-void	five(t_stack *stack);
+// void	five(t_stack *stack);
 
 //sorting_utils_3.c
 void	five_ra(t_stack *stack, int counter);
