@@ -6,7 +6,7 @@
 /*   By: azakarya <azakarya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 20:51:29 by azakarya          #+#    #+#             */
-/*   Updated: 2022/11/20 03:16:09 by azakarya         ###   ########.fr       */
+/*   Updated: 2022/11/21 23:21:28 by azakarya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,12 +73,16 @@ void	rotate(t_stack *stack, int b)
 
 	if (b == 0 || b == 2)
 	{
+		if (ft_lstsize(stack->a) == 1 || ft_lstsize(stack->a) == 0)
+			return ;
 		ft_rotate(&(stack->a));
 		if (b == 0)
 			write(1, "ra\n", 3);
 	}
 	if (b == 1 || b == 2)
 	{
+		if (ft_lstsize(stack->a) == 1 || ft_lstsize(stack->a) == 0)
+			return ;
 		ft_rotate(&(stack->b));
 		if (b == 1)
 			write(1, "rb\n", 3);
@@ -96,12 +100,16 @@ void	rev_rotate(t_stack *stack, int b)
 	i = 0;
 	if (b == 0 || b == 2)
 	{
+		if (ft_lstsize(stack->a) == 1 || ft_lstsize(stack->a) == 0)
+			return ;
 		ft_rev_rotate(&(stack->a));
 		if (b == 0)
 			write(1, "rra\n", 4);
 	}
 	if (b == 1 || b == 2)
 	{
+		if (ft_lstsize(stack->a) == 1 || ft_lstsize(stack->a) == 0)
+			return ;
 		ft_rev_rotate(&(stack->b));
 		if (b == 0)
 			write(1, "rrb\n", 4);

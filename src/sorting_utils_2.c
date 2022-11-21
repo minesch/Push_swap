@@ -6,7 +6,7 @@
 /*   By: azakarya <azakarya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 22:57:04 by azakarya          #+#    #+#             */
-/*   Updated: 2022/11/20 04:11:08 by azakarya         ###   ########.fr       */
+/*   Updated: 2022/11/21 22:48:07 by azakarya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,6 @@ void	sort_3(t_stack	*stack)
 		if (sorting_check(stack->a) != 0)
 			swap(stack, 0);
 	}
-
 }
 
 int	get_min(t_list *list)
