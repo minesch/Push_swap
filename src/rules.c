@@ -6,7 +6,7 @@
 /*   By: azakarya <azakarya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 20:51:29 by azakarya          #+#    #+#             */
-/*   Updated: 2022/11/22 22:15:03 by azakarya         ###   ########.fr       */
+/*   Updated: 2022/11/22 23:29:46 by azakarya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,7 @@ void	push(t_stack *stack, int b)
 	{
 		tmp = stack->a;
 		stack->a = stack->a->next;
+		tmp->next = NULL;
 		if (!stack->b)
 			stack->b = tmp;
 		else

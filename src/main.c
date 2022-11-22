@@ -6,7 +6,7 @@
 /*   By: azakarya <azakarya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 20:39:54 by azakarya          #+#    #+#             */
-/*   Updated: 2022/11/22 22:19:05 by azakarya         ###   ########.fr       */
+/*   Updated: 2022/11/22 23:25:45 by azakarya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ int	main(int ac, char **av)
 		free_stack(stack);
 		// free(stack);
 		// print_stack(stack->a);
-		while(1);
 	}
 	return (0);
 }
