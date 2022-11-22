@@ -33,7 +33,6 @@ int	main(int ac, char **av)
 			push_swap(stack);
 		free_stack(stack);
 		// free(stack);
-		// print_stack(stack->a);
 	}
 	return (0);
 }

@@ -12,40 +12,12 @@
 
 #include	"mainlib.h"
 
-int	get_closer(int size)
+int	get_range(int size)
 {
 	if (size <= 100)
 		return ((15 * size) / 100);
 	else
 		return ((30 * size) / 100);
-}
-
-void	sort_rest_b(t_stack *stack)
-{
-	int	size;
-	int	ind_range;
-	int	count;
-
-	count = 0;
-	size = ft_lstsize(stack->a);
-	while (stack->a)
-	{
-		ind_range = get_closer(size);
-		if (stack->a->index <= count)
-		{
-			push(stack, 1);
-			rotate(stack, 1);
-			count++;
-		}
-		else if (stack->a->index <= count + ind_range)
-		{
-			push(stack, 1);
-			count++;
-		}
-		else
-			rotate(stack, 0);
-	}
-	sort_rest_a(stack);
 }
 
 void	sort_rest_a(t_stack *stack)
@@ -56,8 +28,9 @@ void	sort_rest_a(t_stack *stack)
 
 	sz = ft_lstsize(stack->b);
 	place = 0;
-	while (stack->b)
+	while (stack->b->next)
 	{
+		print_stack(stack->b);
 		first = stack->b;
 		while (sz - 1 != stack->b->index)
 		{
@@ -71,18 +44,47 @@ void	sort_rest_a(t_stack *stack)
 		else if (place > sz / 2)
 			while (stack->b->index != sz - 1)
 				rev_rotate(stack, 1);
-		push(stack, 1);
+		else
+			push(stack, 0);
 		place = 0;
 		sz--;
 	}
 }
+
+void	sort_rest_b(t_stack *stack)
+{
+	int	size;
+	int	range;
+	int	count;
+
+	count = 0;
+	size = ft_lstsize(stack->a);
+	while (stack->a)
+	{
+		range = get_range(size);
+		if (stack->a->index <= count)
+		{
+			push(stack, 1);
+			rotate(stack, 1);
+			count++;
+		}
+		else if (stack->a->index <= count + range)
+		{
+			push(stack, 1);
+			count++;
+		}
+		else
+			rotate(stack, 0);
+	}
+	sort_rest_a(stack);
+}
+
 
 void	sorting(t_stack *stack)
 {
 	int	size;
 
 	size = ft_lstsize(stack->a);
-	printf("gag\n ");
 	if (size == 2)
 		sort_2(stack);
 	else if (size == 3)

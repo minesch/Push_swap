@@ -44,7 +44,6 @@ void	ft_rotate(t_list **ptr)
 {
 	t_list	*last;
 	t_list	*temp;
-
 	last = ft_lstlast(*ptr);
 	temp = (*ptr);
 	(*ptr) = (*ptr)->next;

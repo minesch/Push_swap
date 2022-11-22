@@ -27,7 +27,7 @@ void	swap(t_stack *stack, int b)
 			write(1, "sa\n", 3);
 	}
 	if ((b == 1 || b == 2)
-		&& (ft_lstsize(stack->a) != 1 || ft_lstsize(stack->a) != 0))
+		&& (ft_lstsize(stack->b) != 1 || ft_lstsize(stack->b) != 0))
 	{
 		tmp = stack->b;
 		stack->b = stack->b->next;
@@ -55,7 +55,7 @@ void	push(t_stack *stack, int b)
 			ft_lstadd_front(&(stack->a), tmp);
 		write(1, "pa\n", 3);
 	}
-	if (b == 1 && ft_lstsize(stack->a) != 0)
+	if (b == 1 && ft_lstsize(stack->b) != 0)
 	{
 		tmp = stack->a;
 		stack->a = stack->a->next;
@@ -81,7 +81,7 @@ void	rotate(t_stack *stack, int b)
 	}
 	if (b == 1 || b == 2)
 	{
-		if (ft_lstsize(stack->a) != 1 || ft_lstsize(stack->a) != 0)
+		if (ft_lstsize(stack->b) != 1 || ft_lstsize(stack->b) != 0)
 		{
 			ft_rotate(&(stack->b));
 			if (b == 1)
@@ -94,9 +94,7 @@ void	rotate(t_stack *stack, int b)
 
 void	rev_rotate(t_stack *stack, int b)
 {
-	int		i;
-
-	i = 0;
+	
 	if (b == 0 || b == 2)
 	{
 		if (ft_lstsize(stack->a) != 1 || ft_lstsize(stack->a) != 0)
@@ -108,7 +106,7 @@ void	rev_rotate(t_stack *stack, int b)
 	}
 	if (b == 1 || b == 2)
 	{
-		if (ft_lstsize(stack->a) != 1 || ft_lstsize(stack->a) != 0)
+		if (ft_lstsize(stack->b) != 1 || ft_lstsize(stack->b) != 0)
 		{
 			ft_rev_rotate(&(stack->b));
 			if (b == 0)

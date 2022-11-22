@@ -40,6 +40,7 @@ void	rotate(t_stack *stack, int b);
 void	rev_rotate(t_stack *stack, int b);
 
 //sorting.c
+int		get_range(int size);
 void	push_swap(t_stack *stack);
 void	sorting(t_stack *stack);
 void	sort_rest_b(t_stack *stack);
@@ -49,8 +50,8 @@ void	sort_rest_a(t_stack *stack);
 int		sorting_check(t_list *a);
 void	indexing(t_list *a);
 void	index_neg(t_list *a);
-t_list	*find_smallest(t_list *a);
 void	print_stack(t_list *a);
+t_list	*find_smallest(t_list *a);
 
 //sorting_utils_2.c
 int		get_min(t_list *list);
