@@ -6,7 +6,7 @@
 /*   By: azakarya <azakarya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 20:41:38 by azakarya          #+#    #+#             */
-/*   Updated: 2022/11/21 22:49:56 by azakarya         ###   ########.fr       */
+/*   Updated: 2022/11/22 22:13:12 by azakarya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,8 @@ void	rev_rotate(t_stack *stack, int b);
 //sorting.c
 void	push_swap(t_stack *stack);
 void	sorting(t_stack *stack);
-void	sort_rest(t_stack *stack);
+void	sort_rest_b(t_stack *stack);
+void	sort_rest_a(t_stack *stack);
 
 //sorting_utils_1.c
 int		sorting_check(t_list *a);
@@ -61,5 +62,6 @@ void	sort_5(t_stack	*stack);
 //sorting_utils_3.c
 void	ft_rotate(t_list **ptr);
 void	ft_rev_rotate(t_list **ptr);
+void	free_stack(t_stack *stack);
 
 #endif

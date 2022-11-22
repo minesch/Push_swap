@@ -6,8 +6,8 @@ LIBFT = ./libft
 LIB_LIBFT = $(LIBFT)/libft.a
 OBJS_DIR = obj
 SRC_DIR = src
-FLAGS = -I $(INC)
-LINKERS = -L$(LIBFT) -lft
+FLAGS = -I $(INC) -Wall -Wextra -Werror
+LINKERS = -L$(LIBFT) -lft #-fsanitize=address
 
 SRC = $(wildcard $(SRC_DIR)/*.c)
 OBJ = $(patsubst $(SRC_DIR)/%.c, $(OBJS_DIR)/%.o, $(SRC))

@@ -6,7 +6,7 @@
 /*   By: azakarya <azakarya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 22:26:30 by azakarya          #+#    #+#             */
-/*   Updated: 2022/11/20 04:07:05 by azakarya         ###   ########.fr       */
+/*   Updated: 2022/11/22 22:11:26 by azakarya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 char	**join_args(int ac, char **av)
 {
 	char	*str;
+	char	**res;
 	int		i;
 
 	i = 2;
@@ -25,7 +26,9 @@ char	**join_args(int ac, char **av)
 		str = join_str(str, av[i]);
 		i++;
 	}
-	return (ft_split(str, ' '));
+	res = ft_split(str, ' ');
+	free(str);
+	return (res);
 }
 
 int	atoi_check(char *str)

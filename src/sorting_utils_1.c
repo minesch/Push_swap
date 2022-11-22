@@ -6,7 +6,7 @@
 /*   By: azakarya <azakarya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 04:19:12 by azakarya          #+#    #+#             */
-/*   Updated: 2022/11/20 01:08:06 by azakarya         ###   ########.fr       */
+/*   Updated: 2022/11/22 22:15:36 by azakarya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ int	sorting_check(t_list *a)
 {
 	t_list	*tmp;
 	t_list	*start;
-	int		i;
 	int		num;
 
 	start = a;
@@ -81,7 +80,6 @@ void	print_stack(t_list *a)
 void	indexing(t_list *a)
 {
 	int	loop_count;
-	int	small;
 
 	loop_count = 0;
 	index_neg(a);
