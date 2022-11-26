@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sorting_utils_3.c                                  :+:      :+:    :+:   */
+/*   rules_utills.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: azakarya <azakarya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/05 00:41:33 by azakarya          #+#    #+#             */
-/*   Updated: 2022/11/22 22:12:39 by azakarya         ###   ########.fr       */
+/*   Updated: 2022/11/26 19:49:37 by azakarya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,25 +40,62 @@ void	free_stack(t_stack *stack)
 	free(stack);
 }
 
-void	ft_rotate(t_list **ptr)
+void	shift_rotate(t_list **list)
 {
-	t_list	*last;
-	t_list	*temp;
-	last = ft_lstlast(*ptr);
-	temp = (*ptr);
-	(*ptr) = (*ptr)->next;
-	last->next = temp;
-	temp->next = NULL;
+	t_list	*iter;
+	t_list	*start;
+	t_list	*cur;
+
+	cur = *list;
+	iter = *list;
+	while (iter->next->next)
+		iter = iter->next;
+	start = iter->next;
+	iter->next = NULL;
+	start->next = cur;
+	*list = start;
 }
 
-void	ft_rev_rotate(t_list **ptr)
+void	shift_rev_rotate(t_list **list)
 {
-	t_list	*prelast;
-	t_list	*last;
+	t_list	*iter;
+	t_list	*start;
+	t_list	*cur;
 
-	prelast = ft_lstprelast(*ptr);
-	last = ft_lstlast(*ptr);
-	prelast->next = NULL;
-	last->next = *ptr;
-	*ptr = last;
+	if (!(*list)->next)
+		return ;
+	start = (*list)->next;
+	cur = *list;
+	iter = ft_lstlast(*list);
+	iter->next = cur;
+	cur->next = NULL;
+	*list = start;
+}
+
+int	ft_pb(t_stack *stack)
+{
+	t_list	*tmp;
+
+	tmp = stack->a;
+	stack->a = stack->a->next;
+	tmp->next = NULL;
+	if (!stack->b)
+		stack->b = tmp;
+	else
+		ft_lstadd_front(&stack->b, tmp);
+	return (0);
+}
+
+int	ft_pa(t_stack *stack)
+{
+	t_list	*tmp;
+
+	tmp = stack->b;
+	stack->b = stack->b->next;
+	tmp->next = NULL;
+	if (!stack->a)
+		stack->a = tmp;
+	else
+		ft_lstadd_front(&stack->a, tmp);
+	return (0);
 }

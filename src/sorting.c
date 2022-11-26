@@ -6,7 +6,7 @@
 /*   By: azakarya <azakarya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 03:43:31 by azakarya          #+#    #+#             */
-/*   Updated: 2022/11/22 23:25:11 by azakarya         ###   ########.fr       */
+/*   Updated: 2022/11/26 19:50:13 by azakarya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,32 +22,30 @@ int	get_range(int size)
 
 void	sort_rest_a(t_stack *stack)
 {
-	t_list		*first;
+	t_list		*tmp;
 	long int	place;
-	long int	sz;
+	long int	size;
 
-	sz = ft_lstsize(stack->b);
+	size = ft_lstsize(stack->b);
 	place = 0;
-	while (stack->b->next)
+	while (stack->b)
 	{
-		print_stack(stack->b);
-		first = stack->b;
-		while (sz - 1 != stack->b->index)
+		tmp = stack->b;
+		while (size - 1 != stack->b->index)
 		{
 			place++;
 			stack->b = stack->b->next;
 		}
-		stack->b = first;
-		if (place <= sz / 2)
-			while (stack->b->index != sz - 1)
+		stack->b = tmp;
+		if (place <= size / 2)
+			while (stack->b->index != size - 1)
 				rotate(stack, 1);
-		else if (place > sz / 2)
-			while (stack->b->index != sz - 1)
+		else if (place > size / 2)
+			while (stack->b->index != size - 1)
 				rev_rotate(stack, 1);
-		else
-			push(stack, 0);
+		push(stack, 0);
 		place = 0;
-		sz--;
+		size--;
 	}
 }
 
@@ -78,7 +76,6 @@ void	sort_rest_b(t_stack *stack)
 	}
 	sort_rest_a(stack);
 }
-
 
 void	sorting(t_stack *stack)
 {

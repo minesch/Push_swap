@@ -6,7 +6,7 @@
 /*   By: azakarya <azakarya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 04:19:12 by azakarya          #+#    #+#             */
-/*   Updated: 2022/11/22 22:15:36 by azakarya         ###   ########.fr       */
+/*   Updated: 2022/11/26 19:54:58 by azakarya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,15 @@
 
 int	sorting_check(t_list *a)
 {
-	t_list	*tmp;
-	t_list	*start;
-	int		num;
+	t_list	*aa;
 
-	start = a;
-	while (start)
+	aa = a;
+	while (aa->next)
 	{
-		tmp = start->next;
-		num = start->n;
-		while (tmp)
-		{
-			if (num > tmp->n)
-				return (1);
-			tmp = tmp->next;
-		}
-		start = start->next;
+		if (aa->n < aa->next->n)
+			aa = aa->next;
+		else
+			return (-1);
 	}
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: azakarya <azakarya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 22:57:04 by azakarya          #+#    #+#             */
-/*   Updated: 2022/11/21 22:48:07 by azakarya         ###   ########.fr       */
+/*   Updated: 2022/11/26 20:11:43 by azakarya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,26 @@ void	sort_2(t_stack	*stack)
 
 void	sort_3(t_stack	*stack)
 {
+	// if ((stack->a->n < stack->a->next->n) && (stack->a->next->n
+	// 		> stack->a->next->next->n))
+	// {
+	// 	rev_rotate(stack, 0);
+	// 	if (sorting_check(stack->a) != 0)
+	// 		swap(stack, 0);
+	// }
+	// else if (stack->a->n > stack->a->next->n && stack->a->next->n
+	// 	< stack->a->next->next->n)
+	// {
+	// 	rev_rotate(stack, 0);
+	// 	if (sorting_check(stack->a) != 0)
+	// 		sort_3(stack);
+	// }
+	// else if (stack->a->n > stack->a->next->n
+	// 	&& stack->a->next->n > stack->a->next->next->n)
+	// {
+	// 	rotate(stack, 0);
+	// 	swap(stack, 0);
+	// }
 	if (sorting_check(stack->a) == 0)
 		return ;
 	else if (stack->a->n > stack->a->next->n

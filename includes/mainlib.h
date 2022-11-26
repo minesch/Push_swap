@@ -6,7 +6,7 @@
 /*   By: azakarya <azakarya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 20:41:38 by azakarya          #+#    #+#             */
-/*   Updated: 2022/11/22 22:13:12 by azakarya         ###   ########.fr       */
+/*   Updated: 2022/11/26 19:15:52 by azakarya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,15 @@ void	swap(t_stack *stack, int b);
 void	rotate(t_stack *stack, int b);
 void	rev_rotate(t_stack *stack, int b);
 
+//rules_utils.c
+void	free_stack(t_stack *stack);
+void	shift_rev_rotate(t_list **list);
+void	shift_rotate(t_list **list);
+int		ft_pb(t_stack *stack);
+int		ft_pa(t_stack *stack);
+// void	ft_rotate(t_list *ptr);
+// void	ft_rev_rotate(t_list *ptr);
+
 //sorting.c
 int		get_range(int size);
 void	push_swap(t_stack *stack);
@@ -59,10 +68,5 @@ void	push_min(t_stack *stack);
 void	sort_2(t_stack	*stack);
 void	sort_3(t_stack	*stack);
 void	sort_5(t_stack	*stack);
-
-//sorting_utils_3.c
-void	ft_rotate(t_list **ptr);
-void	ft_rev_rotate(t_list **ptr);
-void	free_stack(t_stack *stack);
 
 #endif
