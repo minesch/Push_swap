@@ -20,26 +20,6 @@ void	sort_2(t_stack	*stack)
 
 void	sort_3(t_stack	*stack)
 {
-	// if ((stack->a->n < stack->a->next->n) && (stack->a->next->n
-	// 		> stack->a->next->next->n))
-	// {
-	// 	rev_rotate(stack, 0);
-	// 	if (sorting_check(stack->a) != 0)
-	// 		swap(stack, 0);
-	// }
-	// else if (stack->a->n > stack->a->next->n && stack->a->next->n
-	// 	< stack->a->next->next->n)
-	// {
-	// 	rev_rotate(stack, 0);
-	// 	if (sorting_check(stack->a) != 0)
-	// 		sort_3(stack);
-	// }
-	// else if (stack->a->n > stack->a->next->n
-	// 	&& stack->a->next->n > stack->a->next->next->n)
-	// {
-	// 	rotate(stack, 0);
-	// 	swap(stack, 0);
-	// }
 	if (sorting_check(stack->a) == 0)
 		return ;
 	else if (stack->a->n > stack->a->next->n

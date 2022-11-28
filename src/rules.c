@@ -16,29 +16,21 @@ void	swap(t_stack *stack, int b)
 {
 	t_list	*tmp;
 
-	if ((b == 0 )
+	if ((b == 0 || b == 2)
 		&& (ft_lstsize(stack->a) != 1 || ft_lstsize(stack->a) != 0))
 	{
 		tmp = stack->a->next;
 		stack->a->next = stack->a;
 		stack->a = tmp;
-		// tmp = stack->a;
-		// stack->a = stack->a->next;
-		// tmp->next = stack->a->next;
-		// stack->a->next = tmp;
 		if (b == 0)
 			write(1, "sa\n", 3);
 	}
-	if ((b == 1)
+	if ((b == 1 || b == 2)
 		&& (ft_lstsize(stack->b) != 1 || ft_lstsize(stack->b) != 0))
 	{
 		tmp = stack->b->next;
 		stack->b->next = stack->b;
 		stack->b = tmp;
-		// tmp = stack->b;
-		// stack->b = stack->b->next;
-		// tmp->next = stack->b->next;
-		// stack->b->next = tmp;
 		if (b == 1)
 			write(1, "sb\n", 3);
 	}
@@ -52,12 +44,12 @@ void	push(t_stack *stack, int b)
 		return ;
 	if (stack->b != NULL && b == 0)
 	{
-		ft_pa(stack);
+		pa(stack);
 		write(1, "pa\n", 3);
 	}
 	else if (stack->a != NULL && b == 1)
 	{
-		ft_pb(stack);
+		pb(stack);
 		write(1, "pb\n", 3);
 	}
 }

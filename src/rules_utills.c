@@ -46,22 +46,6 @@ void	shift_rotate(t_list **list)
 	t_list	*start;
 	t_list	*cur;
 
-	cur = *list;
-	iter = *list;
-	while (iter->next->next)
-		iter = iter->next;
-	start = iter->next;
-	iter->next = NULL;
-	start->next = cur;
-	*list = start;
-}
-
-void	shift_rev_rotate(t_list **list)
-{
-	t_list	*iter;
-	t_list	*start;
-	t_list	*cur;
-
 	if (!(*list)->next)
 		return ;
 	start = (*list)->next;
@@ -72,7 +56,23 @@ void	shift_rev_rotate(t_list **list)
 	*list = start;
 }
 
-int	ft_pb(t_stack *stack)
+void	shift_rev_rotate(t_list **list)
+{
+	t_list	*iter;
+	t_list	*start;
+	t_list	*cur;
+
+	cur = *list;
+	iter = *list;
+	while (iter->next->next)
+		iter = iter->next;
+	start = iter->next;
+	iter->next = NULL;
+	start->next = cur;
+	*list = start;
+}
+
+int	pb(t_stack *stack)
 {
 	t_list	*tmp;
 
@@ -86,7 +86,7 @@ int	ft_pb(t_stack *stack)
 	return (0);
 }
 
-int	ft_pa(t_stack *stack)
+int	pa(t_stack *stack)
 {
 	t_list	*tmp;
 
