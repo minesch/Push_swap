@@ -43,8 +43,8 @@ void	rev_rotate(t_stack *stack, int b);
 void	free_stack(t_stack *stack);
 void	shift_rev_rotate(t_list **list);
 void	shift_rotate(t_list **list);
-int	pb(t_stack *stack);
-int	pa(t_stack *stack);
+int		pb(t_stack *stack);
+int		pa(t_stack *stack);
 
 //sorting.c
 int		get_range(int size);

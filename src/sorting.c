@@ -17,7 +17,7 @@ int	get_range(int size)
 	if (size <= 100)
 		return ((15 * size) / 100);
 	else
-		return ((30 * size) / 100);
+		return ((30 * size) / 500);
 }
 
 void	sort_rest_a(t_stack *stack)
