@@ -6,11 +6,11 @@
 /*   By: azakarya <azakarya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 22:57:04 by azakarya          #+#    #+#             */
-/*   Updated: 2022/11/26 20:11:43 by azakarya         ###   ########.fr       */
+/*   Updated: 2022/11/29 22:47:47 by azakarya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "mainlib.h"
+#include	"mainlib.h"
 
 void	sort_2(t_stack	*stack)
 {

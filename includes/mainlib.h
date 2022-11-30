@@ -6,7 +6,7 @@
 /*   By: azakarya <azakarya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 20:41:38 by azakarya          #+#    #+#             */
-/*   Updated: 2022/11/26 19:15:52 by azakarya         ###   ########.fr       */
+/*   Updated: 2022/11/29 23:40:08 by azakarya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define MAINLIB_H
 
 # include "../libft/libft.h"
+# include "get_next_line.h"
 # include <limits.h>
 
 typedef struct s_stack
@@ -67,4 +68,11 @@ void	sort_2(t_stack	*stack);
 void	sort_3(t_stack	*stack);
 void	sort_5(t_stack	*stack);
 
+//rules_bonus.c
+void	swap_ch(t_stack *stack, int b);
+void	push_ch(t_stack *stack, int b);
+void	rotate_ch(t_stack *stack, int b);
+void	rev_rotate_ch(t_stack *stack, int b);
+
+int		checker(t_stack *stack);
 #endif

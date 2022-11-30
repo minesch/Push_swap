@@ -6,7 +6,7 @@
 /*   By: azakarya <azakarya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 22:20:38 by azakarya          #+#    #+#             */
-/*   Updated: 2022/11/02 23:47:21 by azakarya         ###   ########.fr       */
+/*   Updated: 2022/11/30 01:13:31 by azakarya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ typedef struct s_list
 	int				n;
 	int				index;
 	struct s_list	*next;
-	// struct s_list	*prev;
 }					t_list;
 
 size_t	ft_strlen(const char *s);
