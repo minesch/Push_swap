@@ -42,7 +42,7 @@ $(BONUS_OBJS_DIR)/%.o: $(BONUS_DIR)/%.c | $(BONUS_OBJS_DIR)
 $(BONUS): $(BONUS_OBJS) | $(BONUS_OBJS_DIR)
 	$(CC) $(L_LIBFT) $(FLAGS) -o $(BONUS) $(BONUS_OBJS)
 clean:
-	$(RM) $(OBJS_DIR)
+	$(RM) $(OBJS_DIR) $(BONUS_OBJS_DIR)
 	make clean -C ./libft
 
 fclean: clean

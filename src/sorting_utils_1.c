@@ -6,7 +6,7 @@
 /*   By: azakarya <azakarya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 04:19:12 by azakarya          #+#    #+#             */
-/*   Updated: 2022/11/26 19:54:58 by azakarya         ###   ########.fr       */
+/*   Updated: 2022/11/30 13:45:35 by azakarya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,19 +55,6 @@ t_list	*find_smallest(t_list *a)
 		a = a->next;
 	}
 	return (tmp);
-}
-
-void	print_stack(t_list *a)
-{
-	t_list	*tmp;
-
-	tmp = a;
-	while (tmp)
-	{
-		printf("%d--[%d]\n", tmp->n, tmp->index);
-		tmp = tmp->next;
-	}
-	write(1, "\n", 1);
 }
 
 void	indexing(t_list *a)

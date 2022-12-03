@@ -6,7 +6,7 @@
 /*   By: azakarya <azakarya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 20:51:29 by azakarya          #+#    #+#             */
-/*   Updated: 2022/11/26 20:08:32 by azakarya         ###   ########.fr       */
+/*   Updated: 2022/11/30 13:40:18 by azakarya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,23 @@
 
 void	swap(t_stack *stack, int b)
 {
-	t_list	*tmp;
+	int	tmp;
 
 	if ((b == 0 || b == 2)
 		&& (ft_lstsize(stack->a) != 1 || ft_lstsize(stack->a) != 0))
 	{
-		tmp = stack->a->next;
-		stack->a->next = stack->a;
-		stack->a = tmp;
+		tmp = stack->a->next->n;
+		stack->a->next->n = stack->a->n;
+		stack->a->n = tmp;
 		if (b == 0)
 			write(1, "sa\n", 3);
 	}
 	if ((b == 1 || b == 2)
 		&& (ft_lstsize(stack->b) != 1 || ft_lstsize(stack->b) != 0))
 	{
-		tmp = stack->b->next;
-		stack->b->next = stack->b;
-		stack->b = tmp;
+		tmp = stack->b->next->n;
+		stack->b->next->n = stack->b->n;
+		stack->b->n = tmp;
 		if (b == 1)
 			write(1, "sb\n", 3);
 	}

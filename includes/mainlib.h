@@ -6,7 +6,7 @@
 /*   By: azakarya <azakarya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 20:41:38 by azakarya          #+#    #+#             */
-/*   Updated: 2022/11/29 23:40:08 by azakarya         ###   ########.fr       */
+/*   Updated: 2022/11/30 13:45:45 by azakarya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,6 @@ void	sort_rest_a(t_stack *stack);
 int		sorting_check(t_list *a);
 void	indexing(t_list *a);
 void	index_neg(t_list *a);
-void	print_stack(t_list *a);
 t_list	*find_smallest(t_list *a);
 
 //sorting_utils_2.c
